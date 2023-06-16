@@ -1,4 +1,6 @@
 #Quejas o problemas
+salir = False
+opcion = 0
 def quejas():
     print("Deja aquí tu mensaje y tu respuesta vendrá de uno de nuestros asesores")
     lista=[]
@@ -17,7 +19,8 @@ def quejas():
         print("Datos ingresados: ", len(lista))
         print("Seras contactado de inmediato con uno de nuestros asesores")
         print(lista)
-print(quejas())
+        salir=False
+    return
 
 # Horarios de atencion
 def horarios():
@@ -34,5 +37,30 @@ def horarios():
     tupla_6=("Sábado:7am a 7pm")
     print(tupla_6)
     tuplas=("Estos son nuestros horarios de atención")
+    salir=False
     return tuplas
-print(horarios())
+#menu
+
+ 
+while not salir:
+ 
+    print ("1. Realizar una queja o reclamo")
+    print ("2. Visualizar los horarios")
+    print ("3. Realizar una compra")
+    print ("4. Acerca de nosotros")
+     
+    print ("Elige una opcion")
+
+ 
+    if opcion == 1:
+        print (quejas())
+    elif opcion == 2:
+        print (horarios())
+    elif opcion == 3:
+        print("Opcion 3")
+    elif opcion == 4:
+        salir = True
+    else:
+        print ("Introduce un numero entre 1 y 3")
+ 
+print ("Fin")
